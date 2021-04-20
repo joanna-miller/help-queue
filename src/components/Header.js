@@ -3,7 +3,7 @@ import ticketsImage from "./../img/tickets-image.png";
 
 function Header(){
   return (
-    <img src={ticketsImage} alt="An image of tickets" />
+    <img src={ticketsImage} alt="tickets" />
   );
 }
 
