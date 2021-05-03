@@ -11,7 +11,26 @@ describe("rootReducer", () => {
   test('Should return default state if no action type is recognized', () => {
     expect(rootReducer({}, { type: null })).toEqual({
       masterTicketList: {},
-      formVisibleOnPage: false
+      formVisibleOnPage: false,
+      firestore: {
+        composite: undefined,
+        data: {},
+        errors: {
+          allIds: [],
+          byQuery: {},
+        },
+        listeners: {
+          allIds: [],
+          byId: {},
+        },
+        ordered: {},
+        queries: {},
+        status: {
+          requested: {},
+          requesting: {},
+          timestamps: {},
+        },
+      }
     });
   });
   test('Check that initial state of ticketListReducer matches root reducer', () => {
